@@ -2,19 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=" FILL ME IN ">
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
-
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-
+    <!-- 1.  Moved all css and js links down -->
   </head>
 
   <body>
     <header>
+      <!-- 2.  Optimized image -->
       <a href="/"><img src="optimized/image/profilepic.jpg"></a>
-      <p>Sandhya Diwana<br><span>Course Developer</span></p>
+      <p>Cameron Pittman<br><span>Course Developer</span></p>
     </header>
 
     <div class="container">
@@ -43,8 +42,7 @@
           </li>
 
           <li>
-            <!-- <img style="width: 100px;" src="views/images/pizzeria.jpg"> -->
-            <!-- Optimizing image -->
+            <!-- 3.  Optimized image -->
             <img style="width: 100px;" src="optimized/image/pizzeria.jpg">
             <a href="views/pizza.html">Cam's Pizzeria</a>
             <p>Who wants a performant pizza?</p>
@@ -56,58 +54,17 @@
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
 
-    <!-- 1. Moved Css to bottom and added media print -->
+    <!-- 4. Added media type to print.css-->
     <link href="css/print.css" rel="stylesheet" media="print">
-    <!-- 2. Inlining whole css.  Css minimized at google speed page -->
+
+    <!-- 5. Minimized and inlined the css and google font - see @font-face at end of css -->
     <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
     <style>
-      html{font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:rgba(0,0,0,0);-ms-text-size-adjust:100%;-webkit-text-size-adjust:none;}
-        body{margin:0;font-size:14px;line-height:1.61;font-weight:400;}
-        body, button, input, select, textarea{font-family:'Open Sans', sans-serif;color:#333;}
-        a{color:#12C;}
-        a:visited{color:#61C;}
-        a:focus{outline:thin dotted;}
-        a:hover, a:active{color:#c00;outline:0;}
-        b, strong{font-weight:bold;}
-        pre, code{font-family:monospace, monospace;font-size:1em;}
-        ul, ol{margin:1em 0;padding:0 0 0 20px;}
-        img{border:0;max-width:100%;}
-        body{background:#fff;}
-        header, footer, .container{max-width:45em;margin:0 auto;}
-        header{padding:0 0.5em;color:#C90B0B;}
-        header img{border-radius:40px;float:left;}
-        header p{font-size:1.5em;font-weight:bold;padding-left:4em;}
-        header p span{font-size:0.8em;font-weight:normal;}
-        .hero{padding:2em;background-color:#f8f8f8;font-size:1.2em;border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
-        .content{padding:1em 1em;}
-        .content li{list-style-type:none;font-size:1.1em;}
-        li img{float:left;padding-right:1em;}
-        li p{font-size:0.9em;font-style:italic;}
-        footer{padding:0 0.5em;border-top:1px solid #ccc;}
-        footer span{float:right;font-style:italic;}
-        @media only screen and (max-width:480px){body{font-size:12px;}
-        header p{padding-left:4.5em;}
-      }
+      html{font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:rgba(0,0,0,0);-ms-text-size-adjust:100%;-webkit-text-size-adjust:none}body{margin:0;font-size:14px;line-height:1.61;font-weight:400}body,button,input,select,textarea{font-family:'Open Sans',sans-serif;color:#333}a{color:#12C}a:visited{color:#61C}a:focus{outline:thin dotted}a:hover,a:active{color:#c00;outline:0}b,strong{font-weight:700}pre,code{font-family:monospace,monospace;font-size:1em}ul,ol{margin:1em 0;padding:0 0 0 20px}img{border:0;max-width:100%}body{background:#fff}header,footer,.container{max-width:45em;margin:0 auto}header{padding:0 .5em;color:#C90B0B}header img{border-radius:40px;float:left}header p{font-size:1.5em;font-weight:700;padding-left:4em}header p span{font-size:.8em;font-weight:400}.hero{padding:2em;background-color:#f8f8f8;font-size:1.2em;border-bottom:1px solid #ccc;border-top:1px solid #ccc}.content{padding:1em}.content li{list-style-type:none;font-size:1.1em}li img{float:left;padding-right:1em}li p{font-size:.9em;font-style:italic}footer{padding:0 .5em;border-top:1px solid #ccc}footer span{float:right;font-style:italic}@media only screen and (max-width:480px){body{font-size:12px}header p{padding-left:4.5em}}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local(OpenSans),url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m5Bw1xU1rKptJj_0jans920.woff2) format("woff2");unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F}
     </style>
 
-    <script>
-    // Move the font down here, make it async? Use Font Load API??
-    //var font = new FontFace("Open Sans", "//fonts.googleapis.com/css?family=Open+Sans:400,700", {});
-      //  font.ready().then(function() {
-        // font loaded.. swap in the text / define own behavior.
-    //});
-      //font.load(); // initiate immediate fetch / don't block on render tree!
-    </script>
-
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-    <!-- 3. Moved performance and analytics scripts to bottom -->
-    <script>
-      // 4.  Minimizing at google speed page and inlining javascript
-      // <script async src="js/perfmatters.js">
-      function logCRP(){var t=window.performance.timing,dcl=t.domContentLoadedEventStart-t.domLoading,complete=t.domComplete-t.domLoading;var stats=document.getElementById("crp-stats");stats.textContent='DCL: '+dcl+'ms, onload: '+complete+'ms';}window.addEventListener("load",function(event){logCRP();});
-    </script>
-    <!-- 3. Moved script at bottom -->
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
@@ -116,6 +73,14 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
-    <script src="http://www.google-analytics.com/analytics.js"></script>
+
+    <!-- 6. Added async to analytics.js -->
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
+
+    <!-- 7.  Minimized and inlined javascript -->
+    <script>
+      // <script async src="js/perfmatters.js">
+      function logCRP(){var t=window.performance.timing,dcl=t.domContentLoadedEventStart-t.domLoading,complete=t.domComplete-t.domLoading;var stats=document.getElementById("crp-stats");stats.textContent='DCL: '+dcl+'ms, onload: '+complete+'ms';}window.addEventListener("load",function(event){logCRP();});
+    </script>
   </body>
 </html>
