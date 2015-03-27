@@ -7,6 +7,7 @@
   -box-sizing: border-box;
 }
 
+
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background: black;
@@ -34,8 +35,6 @@ form {
   width: 256px;
   z-index: -1;
   backface-visibility: hidden;
-  transform: translateZ(0);
-  transform: translate3d(0,0,0);
 }
 
 .randomPizzaContainer {
