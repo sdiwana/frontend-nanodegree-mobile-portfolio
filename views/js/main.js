@@ -486,7 +486,7 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // 2. Sandhya
-// Moving pizzasDiv assignment of for loop
+// Moving pizzasDiv assignment out of for loop
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
 var pizzasDiv = document.getElementById("randomPizzas");
@@ -523,6 +523,7 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   //3.  Sandhya
+  // Changed QuerySelectorAll to getElementsByClassName
   // Moved items assignment out of for loop
   // Moved top calculation out of for loop
   // Calculated and assigned 5 phases to an phaseArray
@@ -560,8 +561,8 @@ function updatePositions() {
 }
 
 // 5. Sandhya
-// Added requestAnimationFrame to call update position
-// runs updatePositions on scroll
+// Added requestAnimationFrame to call updatePositions() to
+// run updatePositions on scroll
 window.addEventListener('scroll', function() {
 //window.addEventListener('scroll', updatePositions);
 
@@ -585,7 +586,6 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.src = newPizzaImage.src;
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    //elem.style.cssText = "height: 100; width: 73.333px;"
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.getElementById("movingPizzas1").appendChild(elem);

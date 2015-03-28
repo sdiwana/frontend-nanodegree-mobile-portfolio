@@ -1,3 +1,61 @@
+
+#### Submission Before Review
+### To run and check the frontend-nanodegree-mobile-portfolio/index.html and pizza.html
+# Part I - To Check Google Pagespeed
+- In your command window, type 'python -m SimpleHTTPServer' from same folder where index.html file is.
+- then type '127.0.0.1.8000' on your Google Chrome Canary browser to see the portfolio
+- To access the local server remotely on Google Pagespeed, open another command window and type '(the folder where ngrok is)/ngrok 8000' and then copy and paste the https://.. address to Google Pagespped page.
+# Part I - To Check Pizza.html
+- 60 FPS Check:
+- Click Pizza link on your local host (127.0.0.1.8000) after following the first two steps above.
+- Start Google DevTool, click start button (left most round button) on Timeline tab, and scroll up and down with mouse on pizza page for about 6-8 times.
+- Click on same left most round button to stop recording timeline, and check the timeline graph.
+- Now check Console tab to get the 10 frames rate.
+# Pizza Sizing Check
+- Start Google DevTool and resize pizza on the pizza sizing bar couple of times.
+- Check Console tab on DevTool to see the pizza resizing time.
+
+### Changes to index.html for Google PageSpeed of greater than 90
+- Optimized images though Google Pagespeed suggestion link
+- Moved, minimized, and inlined style.css to bottom
+- Inlined google font - see @fontface in the style.
+- Added media type to print.css
+- Moved all scripts to bottom
+- Added async to analytics.js
+### Changes to views/main.js and views/css/style.css to improve Frame Per Second
+- Changed all QuerySelectorAll and QuerySelector calls to getElementbyClassName and Id.
+- Removed pizza image loading from for loops to load it only once
+- Moving pizzasDiv assignment out of for loop from pizza appending function at load time
+- Changes to updatePositions() function
+- Moved items assignment out of for loop
+- Moved top calculation out of for loop
+- Calculated and assigned 5 phases to an phaseArray
+- Calculated and assigned 8 left values to leftArray
+- Calculated left first with phaseArray and leftArray
+- Used transform and translate3d and translateZ, so hardware acceleration is used, and elements are forced into their own composite layers.  Also, eliminated changing the DOM left.
+- Added requestAnimationFrame to call update position to run updatePositions on scroll
+- Decreased 200 down to an arbitrary number of 24, in addEventListener for DOMContentLoaded
+- Added backface-visibility: hidden to views/css/style.js to reduce paint time
+### Changes to views/main.js, changePizzaSizes() function, to reduce pizza resizing time
+- Moved the dx and newwidth calculation out of for loop.
+- Moved length calculation out of for loop
+
+#### Resources
+- Saw office hours - https://plus.google.com/events/c8eah6f0d0t9eretebpm7dqi0ok?authkey=CKaNhtb0quvqKA
+- fend office hours - https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS
+- Read http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
+- Read https://github.com/mikejoyceio/website-optimization
+
+
+#### Problems
+- Tried installing GULP and ran out of memory, did not try Crunch after that!
+- Thought of base64, but read it increases the image and html size, need to do more research,
+http://stackoverflow.com/questions/5258057/should-i-embed-images-as-data-base64-in-css-or-html, and checkout out, http://www.base64-image.de/step-2.php
+- Didn't quite understand how to convert google font to base64 Optimal, since I am not uploading the font.  Instead, inlined the 'cyrillic-ext' of http://fonts.googleapis.com/css?family=Open+Sans:400,700 link.
+http://www.fontsquirrel.com/tools/webfont-generator
+
+
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -32,7 +90,7 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
