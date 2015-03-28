@@ -464,10 +464,13 @@ var resizePizzas = function(size) {
     // - Moved the dx and newwidth calculation out of for loop.
     // - For dx and newwidth, used the first element in the array, as all pizzas are same.
     // - Moved length calculation out of for loop
+    // document.getElementById("myDIV").classList.add("mystyle");
     var pizzaDivArray = document.getElementsByClassName("randomPizzaContainer");
     var dx = determineDx(pizzaDivArray[0], size);
     var newwidth = (pizzaDivArray[0].offsetWidth + dx) + 'px';
-    var length = document.getElementsByClassName("randomPizzaContainer");
+    // Sandhya
+    // After Review One - added .length to getElementByClassName
+    var length = document.getElementsByClassName("randomPizzaContainer").length;
 
     for (var i = 0; i < length; i++) {
       pizzaDivArray[i].style.width = newwidth;
