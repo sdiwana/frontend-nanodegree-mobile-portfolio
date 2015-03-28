@@ -8,6 +8,8 @@
 - then type '127.0.0.1.8000' on your Google Chrome Canary browser to see the portfolio
 - To access the local server remotely on Google Pagespeed, open another command window and type '(the folder where ngrok is)/ngrok 8000' and then copy and paste the https://.. address to Google Pagespped page.
 
+### Can see the website at http://sdiwana.github.io/frontend-nanodegree-mobile-portfolio/
+
 
 ### How to run and view 60 FPS Check:
 - Click Pizza link on your local host (127.0.0.1.8000) after following the first two steps above.
@@ -48,7 +50,7 @@
 - Moved the dx and newwidth calculation out of for loop.
 - Moved length calculation out of for loop
 
-### Added Optimized folder of Views and used optimized images
+### Added Optimized folder of Views folder, and used optimized images
 
 ## Resources
 - Made use of suggestions on Google Pagespeed
