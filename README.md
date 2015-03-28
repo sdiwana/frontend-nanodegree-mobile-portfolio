@@ -1,7 +1,7 @@
 
-#### Submission Before Review
-### To run and check the frontend-nanodegree-mobile-portfolio/index.html and pizza.html
-# Part I - To Check Google Pagespeed
+# Submission Before Review
+## To run and check the frontend-nanodegree-mobile-portfolio/index.html and pizza.html
+### Part I - To Check Google Pagespeed
 - In your command window, type 'python -m SimpleHTTPServer' from same folder where index.html file is.
 - then type '127.0.0.1.8000' on your Google Chrome Canary browser to see the portfolio
 - To access the local server remotely on Google Pagespeed, open another command window and type '(the folder where ngrok is)/ngrok 8000' and then copy and paste the https://.. address to Google Pagespped page.
@@ -17,7 +17,7 @@
 
 ### Changes to index.html for Google PageSpeed of greater than 90
 - Optimized images though Google Pagespeed suggestion link
-- Moved, minimized, and inlined style.css to bottom
+- Moved, minifiedå, and inlined style.css to bottom.  Used http://cssminifier.com/ to minify
 - Inlined google font - see @fontface in the style.
 - Added media type to print.css
 - Moved all scripts to bottom
@@ -39,20 +39,24 @@
 ### Changes to views/main.js, changePizzaSizes() function, to reduce pizza resizing time
 - Moved the dx and newwidth calculation out of for loop.
 - Moved length calculation out of for loop
+### Added Optimized folder of Views and used optimized images
 
 #### Resources
+- Made use of suggestions on Google Pagespeed
+- Used minify resources, https://developers.google.com/speed/docs/insights/MinifyResources
 - Saw office hours - https://plus.google.com/events/c8eah6f0d0t9eretebpm7dqi0ok?authkey=CKaNhtb0quvqKA
 - fend office hours - https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS
 - Read http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
 - Read https://github.com/mikejoyceio/website-optimization
+- Many other google search on css optimizations
 
 
 #### Problems
 - Tried installing GULP and ran out of memory, did not try Crunch after that!
 - Thought of base64, but read it increases the image and html size, need to do more research,
-http://stackoverflow.com/questions/5258057/should-i-embed-images-as-data-base64-in-css-or-html, and checkout out, http://www.base64-image.de/step-2.php
-- Didn't quite understand how to convert google font to base64 Optimal, since I am not uploading the font.  Instead, inlined the 'cyrillic-ext' of http://fonts.googleapis.com/css?family=Open+Sans:400,700 link.
-http://www.fontsquirrel.com/tools/webfont-generator
+http://stackoverflow.com/questions/5258057/should-i-embed-images-as-data-base64-in-css-or-html, and checkout out the: http://www.base64-image.de/step-2.php
+- Didn't quite understand how to convert google font to base64 Optimal, since I am not uploading the font.  Instead, inlined the 'cyrillic-ext' of
+http://fonts.googleapis.com/css?family=Open+Sans:400,700 link. Looked at http://www.fontsquirrel.com/tools/webfont-generator
 
 
 
