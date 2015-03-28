@@ -1,4 +1,7 @@
 
+# Submission After First Review
+- Added length in getting length from getElementsByClassName, so pizza can resize.
+
 # Submission Before Review
 
 ## RUNNING
