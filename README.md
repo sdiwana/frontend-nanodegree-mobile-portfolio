@@ -5,7 +5,8 @@
 
 ### How to run and check the frontend-nanodegree-mobile-portfolio/index.html and pizza.html
 - In your command window, type 'python -m SimpleHTTPServer' from same folder where index.html file is.
-- then type '127.0.0.1.8000' on your Google Chrome Canary browser to see the portfolio
+- Then type '127.0.0.1.8000' on your Google Chrome Canary browser to see the portfolio
+- Can also view the file on http://sdiwana.github.io/frontend-nanodegree-mobile-portfolio/
 - To access the local server remotely on Google Pagespeed, open another command window and type '(the folder where ngrok is)/ngrok 8000' and then copy and paste the https://.. address to Google Pagespped page.
 
 
