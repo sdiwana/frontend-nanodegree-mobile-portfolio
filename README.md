@@ -64,7 +64,7 @@
 - Tried installing GULP and ran out of memory, did not try Crunch after that!
 - Thought of base64, but read it increases the image and html size, need to do more research,
 http://stackoverflow.com/questions/5258057/should-i-embed-images-as-data-base64-in-css-or-html, and checkout out the: http://www.base64-image.de/step-2.php
-- Didn't quite understand how to convert google font to base64 Optimal, since I am not uploading the font.  Instead, inlined the 'cyrillic-ext' of
+- Didn't quite understand how to convert google font to base64 Optimal, since I do not have the font to upload. Could do more research.  Instead, inlined the 'cyrillic-ext' of
 http://fonts.googleapis.com/css?family=Open+Sans:400,700 link. Looked at http://www.fontsquirrel.com/tools/webfont-generator
 
 
